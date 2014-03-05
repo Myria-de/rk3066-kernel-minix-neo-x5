@@ -1,0 +1,11 @@
+--- fs/proc/base.c
++++ fs/proc/base.c
+@@ -205,7 +147,7 @@
+ 
+ 	mm = get_task_mm(task);
+ 	if (mm && mm != current->mm &&
+-			!ptrace_may_access(task, PTRACE_MODE_READ)) {
++			!ptrace_may_access(task, mode)) {
+ 		mmput(mm);
+ 		mm = ERR_PTR(-EACCES);
+ 	}

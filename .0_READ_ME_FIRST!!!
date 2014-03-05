@@ -1,0 +1,10 @@
+This is longterm support kernel version 3.0.x sources.
+Based on 3.0.8 kernel version with Rockchip rk3066 SoC support.
+
+All patches till 3.0.100 version applyed. See kernel.org for more info.
+
+
+We still need some closed source kernel modules (rk30xxnand_ko.ko.3.0.8+ only now).
+DO NOT alter SUBLEVEL in Makefile from 8 to any other! Keep it 3.0.8+ if you want mount nand partitions.
+Or you need update rknand code too (3.0.8 code might not work with 3.0.36 and 3.0.72 rk30xxnand modules proper!).
+
